@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday! 🎂✨</title>
-    <!-- Tailwind CSS CDN -->
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Canvas Confetti Library -->
+
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-    <!-- FontAwesome Icons -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
+
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <script>
@@ -36,7 +36,7 @@
     </script>
 
     <style>
-        /* Custom Keyframe Animations */
+
         @keyframes floatSlow {
             0%, 100% { transform: translateY(0px) rotate(0deg); }
             50% { transform: translateY(-12px) rotate(3deg); }
@@ -71,13 +71,13 @@
             animation: smokeRise 1.2s forwards ease-out;
         }
 
-        /* 3D Flip Card Effect */
+
         .perspective-1000 { perspective: 1000px; }
         .transform-style-3d { transform-style: preserve-3d; }
         .backface-hidden { backface-visibility: hidden; }
         .rotate-y-180 { transform: rotateY(180deg); }
 
-        /* Custom Scrollbar */
+
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #FFF0F5; }
         ::-webkit-scrollbar-thumb { background: #FF758F; border-radius: 4px; }
@@ -85,17 +85,17 @@
 </head>
 <body class="bg-gradient-to-br from-pink-100 via-rose-100 to-pink-200 text-gray-800 min-h-screen">
 
-    <!-- Background Canvas for Ambient Particles -->
+
     <canvas id="bgCanvas" class="fixed inset-0 pointer-events-none z-0"></canvas>
 
-    <!-- Navigation / Top Audio Bar -->
+
     <header class="relative z-20 max-w-5xl mx-auto px-6 pt-6 flex justify-between items-center">
         <div class="flex items-center gap-2">
             <span class="text-2xl animate-bounce">🎈</span>
             <span class="font-bold text-lg md:text-xl tracking-wide bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent drop-shadow-sm">Happi Birthdayie Cuwwipieee</span>
         </div>
         
-        <!-- Controls: Music & Confetti -->
+
         <div class="flex items-center gap-3">
             <button id="musicBtn" onclick="toggleMusic()" class="flex items-center gap-2 bg-white/80 hover:bg-white border border-pink-200 px-4 py-2 rounded-full transition-all duration-300 shadow-md text-sm font-semibold text-rose-600 backdrop-blur-md">
                 <i id="musicIcon" class="fa-solid fa-music text-rose-500"></i>
@@ -107,16 +107,16 @@
         </div>
     </header>
 
-    <!-- Main Container -->
+
     <main class="relative z-10 max-w-4xl mx-auto px-4 py-8 flex flex-col items-center gap-12">
 
-        <!-- Hero Section -->
+
 <section class="text-center mt-2 px-4 overflow-visible">
     <div class="inline-block px-4 py-1.5 rounded-full bg-pink-500/15 border border-pink-400/30 text-rose-700 text-sm font-bold mb-4 animate-pulse">
         ✨ Wishie and blowie candlie!
     </div>
     
-    <!-- Dùng màu solid text-rose-500 kết hợp drop-shadow để giữ nguyên 100% nét chữ uốn lượn không lo bị crop -->
+
     <h1 class="font-cursive text-6xl md:text-8xl text-rose-500 drop-shadow-sm mb-3 leading-normal px-6 py-3 inline-block whitespace-nowrap">
         Happy Birthday!
     </h1>
@@ -126,16 +126,16 @@
     </p>
 </section>
 
-        <!-- Interactive Birthday Cake Section -->
+
         <section class="flex flex-col items-center justify-center w-full">
             <div class="relative my-4 select-none animate-float">
                 
-                <!-- Cake SVG Container -->
+
                 <div class="relative w-64 md:w-80 h-64 flex items-end justify-center">
                     
-                    <!-- Cake Base -->
+
                     <div class="relative w-full flex flex-col items-center">
-                        <!-- Top Frosting Decorative Swirls -->
+
                         <div class="w-48 md:w-60 h-8 bg-pink-300 rounded-t-full shadow-inner flex justify-around items-center px-2 z-10">
                             <div class="w-3 h-3 bg-white rounded-full opacity-90"></div>
                             <div class="w-4 h-4 bg-white rounded-full opacity-90"></div>
@@ -143,43 +143,43 @@
                             <div class="w-4 h-4 bg-white rounded-full opacity-90"></div>
                         </div>
 
-                        <!-- Layer 3 (Top) -->
+
                         <div class="w-48 md:w-60 h-16 bg-gradient-to-b from-pink-400 to-rose-500 rounded-b-xl shadow-md relative overflow-hidden flex items-center justify-center border-b-4 border-rose-600/30">
                             <div class="absolute inset-x-0 top-0 h-3 bg-pink-200/50 rounded-full"></div>
                         </div>
 
-                        <!-- Layer 2 (Middle) -->
+
                         <div class="w-56 md:w-72 h-16 bg-gradient-to-b from-purple-400 to-pink-500 rounded-b-xl shadow-lg relative overflow-hidden border-b-4 border-purple-600/30">
                             <div class="absolute inset-x-0 top-0 h-4 bg-pink-200/40 rounded-full"></div>
                         </div>
 
-                        <!-- Layer 1 (Bottom Plate & Base) -->
+
                         <div class="w-64 md:w-80 h-16 bg-gradient-to-b from-amber-700 to-amber-900 rounded-b-2xl shadow-xl relative border-b-4 border-amber-950/40">
                             <div class="absolute inset-x-0 top-0 h-4 bg-amber-500/30 rounded-full"></div>
                         </div>
 
-                        <!-- Plate -->
+
                         <div class="w-72 md:w-96 h-5 bg-gradient-to-r from-slate-200 via-white to-slate-200 rounded-full shadow-md mt-[-4px]"></div>
                     </div>
 
-                    <!-- Candles Container -->
+
                     <div class="absolute top-12 left-1/2 -translate-x-1/2 flex justify-between w-36 md:w-44 px-2 z-20">
                         
-                        <!-- Candle 1 -->
+
                         <div class="candle flex flex-col items-center cursor-pointer group" onclick="extinguishCandle(0)">
                             <div id="flame-0" class="flame w-4 h-6 bg-gradient-to-t from-amber-500 via-orange-400 to-yellow-200 rounded-full shadow-[0_0_12px_#f59e0b] group-hover:scale-125 transition-transform"></div>
                             <div class="w-1 h-3 bg-slate-600"></div>
                             <div class="w-3.5 h-12 bg-gradient-to-b from-yellow-300 via-amber-400 to-yellow-300 rounded-sm shadow-sm"></div>
                         </div>
 
-                        <!-- Candle 2 (Middle) -->
+
                         <div class="candle flex flex-col items-center cursor-pointer group -mt-2" onclick="extinguishCandle(1)">
                             <div id="flame-1" class="flame w-4 h-6 bg-gradient-to-t from-amber-500 via-orange-400 to-yellow-200 rounded-full shadow-[0_0_12px_#f59e0b] group-hover:scale-125 transition-transform"></div>
                             <div class="w-1 h-3 bg-slate-600"></div>
                             <div class="w-3.5 h-14 bg-gradient-to-b from-pink-300 via-rose-400 to-pink-300 rounded-sm shadow-sm"></div>
                         </div>
 
-                        <!-- Candle 3 -->
+
                         <div class="candle flex flex-col items-center cursor-pointer group" onclick="extinguishCandle(2)">
                             <div id="flame-2" class="flame w-4 h-6 bg-gradient-to-t from-amber-500 via-orange-400 to-yellow-200 rounded-full shadow-[0_0_12px_#f59e0b] group-hover:scale-125 transition-transform"></div>
                             <div class="w-1 h-3 bg-slate-600"></div>
@@ -190,7 +190,7 @@
                 </div>
             </div>
 
-            <!-- Blow Out Action Button -->
+
             <div class="flex flex-col items-center gap-2 mt-2">
                 <button id="blowBtn" onclick="blowAllCandles()" class="bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white font-bold px-7 py-3 rounded-full shadow-lg shadow-pink-500/25 transition-all duration-300 hover:scale-105 active:scale-95 flex items-center gap-2">
                     <i class="fa-solid fa-wind"></i>
@@ -200,7 +200,7 @@
             </div>
         </section>
 
-        <!-- Interactive Memory Flip Cards -->
+
         <section class="w-full">
             <div class="text-center mb-6">
                 <h2 class="text-2xl md:text-3xl font-extrabold text-rose-900">
@@ -211,10 +211,10 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 
-                <!-- Card 1 -->
+
                 <div class="perspective-1000 h-48 cursor-pointer group" onclick="flipCard(this)">
                     <div class="card-inner relative w-full h-full duration-500 transform-style-3d transition-transform">
-                        <!-- Front -->
+
                         <div class="absolute inset-0 bg-white/90 border border-pink-200/80 rounded-2xl p-6 flex flex-col justify-center items-center text-center backface-hidden shadow-lg shadow-pink-100/50 group-hover:border-pink-400 transition-colors">
                             <div class="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center text-pink-500 text-xl mb-3">
                                 <i class="fa-solid fa-star"></i>
@@ -222,7 +222,7 @@
                             <h3 class="font-bold text-lg text-rose-950">Blessie één</h3>
                             <p class="text-xs text-rose-600/70 mt-1 font-medium">Bấm để đọc blessie 1 của bunnienie</p>
                         </div>
-                        <!-- Back -->
+
                         <div class="absolute inset-0 bg-gradient-to-br from-pink-500 to-rose-600 rounded-2xl p-6 flex flex-col justify-center items-center text-center rotate-y-180 backface-hidden shadow-xl">
                             <i class="fa-solid fa-quote-left text-pink-200/40 text-2xl absolute top-3 left-3"></i>
                             <p class="text-sm text-white font-semibold italic leading-relaxed">
@@ -232,10 +232,10 @@
                     </div>
                 </div>
 
-                <!-- Card 2 -->
+
                 <div class="perspective-1000 h-48 cursor-pointer group" onclick="flipCard(this)">
                     <div class="card-inner relative w-full h-full duration-500 transform-style-3d transition-transform">
-                        <!-- Front -->
+
                         <div class="absolute inset-0 bg-white/90 border border-purple-200/80 rounded-2xl p-6 flex flex-col justify-center items-center text-center backface-hidden shadow-lg shadow-pink-100/50 group-hover:border-purple-400 transition-colors">
                             <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center text-purple-500 text-xl mb-3">
                                 <i class="fa-solid fa-heart"></i>
@@ -243,7 +243,7 @@
                             <h3 class="font-bold text-lg text-purple-950">Blessie twee</h3>
                             <p class="text-xs text-purple-600/70 mt-1 font-medium">Bấm để đọc blessie 2 của bunnienie</p>
                         </div>
-                        <!-- Back -->
+
                         <div class="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl p-6 flex flex-col justify-center items-center text-center rotate-y-180 backface-hidden shadow-xl">
                             <i class="fa-solid fa-quote-left text-purple-200/40 text-2xl absolute top-3 left-3"></i>
                             <p class="text-sm text-white font-semibold italic leading-relaxed">
@@ -253,10 +253,10 @@
                     </div>
                 </div>
 
-                <!-- Card 3 -->
+
                 <div class="perspective-1000 h-48 cursor-pointer group sm:col-span-2 md:col-span-1" onclick="flipCard(this)">
                     <div class="card-inner relative w-full h-full duration-500 transform-style-3d transition-transform">
-                        <!-- Front -->
+
                         <div class="absolute inset-0 bg-white/90 border border-amber-200/80 rounded-2xl p-6 flex flex-col justify-center items-center text-center backface-hidden shadow-lg shadow-pink-100/50 group-hover:border-amber-400 transition-colors">
                             <div class="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center text-amber-500 text-xl mb-3">
                                 <i class="fa-solid fa-cake-candles"></i>
@@ -264,7 +264,7 @@
                             <h3 class="font-bold text-lg text-amber-950">Blessie drie</h3>
                             <p class="text-xs text-amber-600/70 mt-1 font-medium">Bấm để đọc blessie 3 của bunnienie</p>
                         </div>
-                        <!-- Back -->
+
                         <div class="absolute inset-0 bg-gradient-to-br from-amber-500 to-rose-500 rounded-2xl p-6 flex flex-col justify-center items-center text-center rotate-y-180 backface-hidden shadow-xl">
                             <i class="fa-solid fa-quote-left text-amber-200/40 text-2xl absolute top-3 left-3"></i>
                             <p class="text-sm text-white font-semibold italic leading-relaxed">
@@ -277,7 +277,7 @@
             </div>
         </section>
 
-        <!-- Interactive Gift Unboxing Section -->
+
         <section class="w-full bg-white/80 border border-pink-200/80 rounded-3xl p-6 md:p-8 backdrop-blur-md shadow-xl shadow-pink-100/60">
             <div class="text-center mb-6">
                 <h2 class="text-2xl md:text-3xl font-extrabold text-rose-950">🎁 Quà đặc biệt dành cho cuwwipieee</h2>
@@ -286,21 +286,21 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
                 
-                <!-- Gift 1 -->
+
                 <div id="gift-1" onclick="openGift(1, '🎟️ Specialie Ticketie: Babe can askie me (or fluffi) to do anythingie!')" class="group bg-pink-50/60 hover:bg-pink-100/80 border border-pink-200 p-6 rounded-2xl cursor-pointer transition-all duration-300 hover:-translate-y-2 flex flex-col items-center shadow-sm">
                     <div class="gift-icon text-5xl mb-3 group-hover:scale-110 transition-transform duration-300">🎁</div>
                     <span class="font-bold text-sm text-pink-700">Giftie één</span>
                     <span class="gift-status text-xs text-rose-500/80 font-medium mt-1">Bấm để mở</span>
                 </div>
 
-                <!-- Gift 2 -->
+    
                 <div id="gift-2" onclick="openGift(2, '♾️ Lifetime Voucherie: Vô hạn wubwi và yêu thương từ me and kiddie!')" class="group bg-purple-50/60 hover:bg-purple-100/80 border border-purple-200 p-6 rounded-2xl cursor-pointer transition-all duration-300 hover:-translate-y-2 flex flex-col items-center shadow-sm">
                     <div class="gift-icon text-5xl mb-3 group-hover:scale-110 transition-transform duration-300">📦</div>
                     <span class="font-bold text-sm text-purple-700">Giftie twee</span>
                     <span class="gift-status text-xs text-purple-500/80 font-medium mt-1">Bấm để mở</span>
                 </div>
 
-                <!-- Gift 3 -->
+
                 <div id="gift-3" onclick="openGift(3, '🌟 Wishie Couponie: bunnienie sẽ blessie mọi điều ước của mama trở thành hiện thực!')" class="group bg-amber-50/60 hover:bg-amber-100/80 border border-amber-200 p-6 rounded-2xl cursor-pointer transition-all duration-300 hover:-translate-y-2 flex flex-col items-center shadow-sm">
                     <div class="gift-icon text-5xl mb-3 group-hover:scale-110 transition-transform duration-300">🎀</div>
                     <span class="font-bold text-sm text-amber-700">Giftie drie</span>
@@ -309,7 +309,7 @@
 
             </div>
 
-            <!-- Revealed Gift Modal Container / Alert -->
+
             <div id="giftRevealBox" class="hidden mt-6 p-4 rounded-xl bg-pink-100/90 border border-pink-300 text-center animate-pulse">
                 <span id="giftRevealText" class="text-base md:text-lg font-bold text-rose-700"></span>
             </div>
@@ -317,7 +317,7 @@
 
     </main>
 
-    <!-- Footer -->
+
     <footer class="relative z-10 text-center py-8 text-rose-700/60 text-xs border-t border-pink-200/60 mt-12 font-medium">
         <a href="https://drive.google.com/file/d/1NRwt6qX7JtuQkV-9GHhnTuAmIBox7ou1/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="underline hover:text-rose-600 transition-colors font-semibold ml-1">
         Secret linkie only cuwwipieee can openie
@@ -325,7 +325,7 @@
     </footer>
 
     <script>
-        /* Ambient Particle Background System */
+
         const canvas = document.getElementById('bgCanvas');
         const ctx = canvas.getContext('2d');
         let particles = [];
@@ -378,7 +378,7 @@
         }
         animateParticles();
 
-        /* Web Audio Synthesizer (Happy Birthday Melody) */
+
         let audioCtx = null;
         let isPlaying = false;
         let melodyTimeout = null;
@@ -484,7 +484,7 @@
             }
         }
 
-        /* Interactive Candle Blowing Logic */
+
         let candlesLit = [true, true, true];
 
         function createSmoke(x, y) {
@@ -567,7 +567,7 @@
             }
         }
 
-        /* Confetti Cannon */
+
         function triggerConfettiExplosion() {
             playRealisticBlowSound();
             if (typeof confetti === 'function') {
@@ -579,7 +579,7 @@
             }
         }
 
-        /* Flip Card Interaction */
+
         function flipCard(cardEl) {
             const inner = cardEl.querySelector('.card-inner');
             if (inner) {
@@ -587,22 +587,22 @@
             }
         }
 
-        /* Mystery Gift Unboxing */
+
         function openGift(id, surpriseText) {
     const giftBox = document.getElementById(`gift-${id}`);
     const status = giftBox.querySelector('.gift-status');
     const icon = giftBox.querySelector('.gift-icon');
 
-    // Mảng định nghĩa màu chữ trạng thái Opened! riêng cho từng hộp quà
+
     const colorClasses = {
-        1: 'text-pink-600 font-bold',    // Hộp 1: Hồng
-        2: 'text-purple-600 font-bold',  // Hộp 2: Tím
-        3: 'text-amber-600 font-bold'    // Hộp 3: Vàng/Cam
+        1: 'text-pink-600 font-bold',    
+        2: 'text-purple-600 font-bold',  
+        3: 'text-amber-600 font-bold'    
     };
 
     icon.innerText = '🔓';
     status.innerText = 'Beheheee!';
-    // Gán class màu chuẩn theo id của hộp quà
+
     status.className = `gift-status text-xs mt-1 ${colorClasses[id] || 'text-rose-600 font-bold'}`;
 
     const revealBox = document.getElementById('giftRevealBox');
